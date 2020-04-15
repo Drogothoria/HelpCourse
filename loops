@@ -1,0 +1,30 @@
+argest = None
+smallest = None
+list = []
+while True:
+    num = input("Enter a number: ")
+    try:
+        if num == "Done":
+            break
+        elif num.isdigit() == False:
+            print("Invalide input")
+        else:
+            list.append(num)
+
+    finally:
+        for v in list:
+            if largest is None:
+                largest = v
+            elif v > largest:
+                largest = v
+
+        for value in list:
+            if smallest is None:
+                smallest = value
+            elif value < smallest:
+                smallest = value
+
+
+print(list)
+print("Maximum is", largest)
+print("Minimum is", smallest)
